@@ -29,6 +29,8 @@
 <!-- Favicon: monograma en línea, sin depender de un archivo externo -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23201e1d'/%3E%3Cpath d='M10 8h7a6.5 6.5 0 0 1 0 13H10' fill='none' stroke='%23ec3013' stroke-width='2.2' stroke-linecap='square'/%3E%3C/svg%3E">
 
+<link rel="preload" href="fonts/fraunces-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/fraunces-latin-ext-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/archivo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="jaga-shared.css">
 <link rel="stylesheet" href="styles.css">
@@ -48,57 +50,82 @@
 </script>
 </head>
 <body>
+<!-- Isotipo de Jagā (jaguar): un solo símbolo, reutilizado con <use>; toma el color del texto (currentColor) -->
+<svg class="jaga-sprite" aria-hidden="true" focusable="false"><symbol id="jaga-isotipo" viewBox="0 0 339 331"><path fill="currentColor" fill-rule="evenodd" d="M30.1 6.6L5.1 49.1L30 117L30.2 200L77 240.8L85.1 272.1L112.6 291.9L121.1 310.1L126 315.6L144.4 322.8L165.4 326.5L184.8 324.8L196.1 321.6L210.2 315.8L214.6 311.1L223.8 291.6L251.1 271.9L259.2 240.6L306.5 199.4L306.6 115.9L331 49.4L318.6 26.5L305.5 6.5L247.8 37.1L169.1 15.9L87.6 37.1ZM125.5 291.5L132.8 288L169 276L208.2 290L210.9 292.1L205.8 303.4L202.4 307L183.4 313.9L165.4 315.9L149.9 312.9L133.9 306.9L130.1 302.4ZM140.6 223.4L148.6 221.8L166.9 225.6L188.5 221.9L194.2 222.6L195.2 223.8L167.9 246ZM86.9 128.2L97.5 128L108 131L116.2 136L121.1 142.9L109.4 145.9L98.2 144.9L91.1 138.2ZM248.4 128.5L243.9 139.4L237.9 144.8L228.1 146L215 143.1L219.6 136.2L228.1 130.9L241.1 127.6L247 127.5ZM50.5 30L87.4 49.6L167.8 27.8L248.5 49.6L285.6 29.9L262 70L294.8 115.4L294.8 194.2L257.5 226.9L256.2 226.1L244.8 192.8L234.4 195.8L247.6 237.2L241.8 263.2L240.1 266.2L217.5 281.4L175.1 266L174.1 264.4L174.1 256.6L213.9 222.9L207.9 170L210.9 155.1L232.6 157L239.2 155.8L246.4 152.6L251.8 148L255.8 142.2L261 128.6L270.8 120.2L248.1 116.5L237.1 117.1L222 122L211 129.1L206.2 135L203.1 141.4L196.8 166.1L201.2 212.1L189.4 209.9L167.2 214.4L145.8 209.8L134.6 212.4L139.2 166.5L132.6 140.5L129 133.5L125 128.9L114.2 122.1L98.5 117.1L87.6 116.5L66 120L74.6 128.4L82 145L90.6 153.5L102.9 157L125 154.9L128.1 169.9L122.1 222.8L162 256.6L161.2 266.4L120.1 280.9L117 281L95 265.4L88.6 237.8L101.8 195.9L91.4 192.5L80 226.4L78.8 227L41.6 194.6L41.4 115.6L74 69.6ZM32.5 24.8L60.4 68.5L36.9 101.1L17.8 50ZM303.4 24.2L318.6 50.5L303.8 92L299.4 101.2L275.9 68.1Z"/></symbol></svg>
 <a class="jaga-skip" href="#inicio">Saltar al contenido</a>
 
 <header class="hub-header">
   <div class="wrap">
-    <img class="hub-logo" src="img/jaga-logo.png" width="308" height="96" alt="Jagā">
-    <p class="hub-header__place">Corrientes Capital</p>
+    <p class="lockup">
+      <svg class="lockup__mark" viewBox="0 0 339 331" aria-hidden="true" focusable="false"><use href="#jaga-isotipo"/></svg>
+      <span class="lockup__name">Jagā</span> <span class="lockup__sep" aria-hidden="true">·</span> <span class="lockup__desc">Soluciones Informáticas</span>
+    </p>
+    <a class="hub-header__contact" href="#contacto">Contacto</a>
   </div>
 </header>
 
 <main id="inicio">
   <section class="hub-hero" aria-labelledby="hub-titulo">
-    <div class="wrap">
-      <p class="hub-kicker">Jagā · tres áreas</p>
-      <h1 id="hub-titulo">¿En qué podemos ayudarte hoy?</h1>
-      <p class="hub-lead">Tres áreas para resolver lo que necesita tu tecnología. Elegí por dónde empezar y te orientamos.</p>
+    <div class="wrap hub-hero__grid">
+      <div class="hub-hero__brand">
+        <p class="lockup lockup--v">
+          <svg class="lockup__mark" viewBox="0 0 339 331" aria-hidden="true" focusable="false"><use href="#jaga-isotipo"/></svg>
+          <span class="lockup__name">Jagā</span>
+          <span class="lockup__desc">Soluciones Informáticas</span>
+        </p>
+      </div>
+      <div class="hub-hero__text">
+        <h1 class="hub-title" id="hub-titulo"><span class="hub-title__w">Personal,</span> <span class="hub-title__w">profesional</span> <span class="hub-title__w"><span class="hub-title__y">y</span> seguro<span class="hub-title__dot">.</span></span></h1>
+        <p class="hub-lead">Mantenimiento, diseño digital y ciberseguridad bajo una misma firma.</p>
+      </div>
     </div>
   </section>
 
   <div class="wrap">
-    <ul class="hub-cards">
-      <li class="hub-card hub-card--mantenimiento">
-        <p class="hub-card__need">«Necesito optimizar y proteger mis equipos»</p>
-        <h2 class="hub-card__brand">Mantenimiento</h2>
-        <p class="hub-card__sub">Diagnóstico, puesta a punto y revisión de seguridad de tus equipos y tu red. Te entregamos un informe claro para que particulares, profesionales y PyMEs trabajen con tranquilidad.</p>
-        <a class="hub-card__link" href="https://mantenimiento.jagasoluciones.com/">Ir a Mantenimiento <span aria-hidden="true">→</span></a>
+    <ul class="hub-cards" role="list">
+      <li class="hub-card">
+        <h2 class="hub-card__title"><span class="hub-card__jaga">Jagā <span aria-hidden="true">·</span></span> Mantenimiento</h2>
+        <p class="hub-card__claim">Equipos y redes en su mejor estado, con informe claro.</p>
+        <ul class="hub-card__list" role="list">
+          <li>Diagnóstico y puesta a punto</li>
+          <li>Optimización de rendimiento</li>
+          <li>Revisión de seguridad</li>
+          <li>Informe en PDF de lo realizado</li>
+        </ul>
+        <p class="hub-card__foot">Particulares, profesionales y PyMEs.</p>
+        <a class="hub-card__link" href="https://mantenimiento.jagasoluciones.com/">Entrar a Mantenimiento <span aria-hidden="true">→</span></a>
       </li>
-      <li class="hub-card hub-card--design">
-        <p class="hub-card__need">«Busco desarrollo y diseño a mi medida»</p>
-        <h2 class="hub-card__brand">Digital Design</h2>
-        <p class="hub-card__sub">Creamos sitios web, aplicaciones, presentaciones y documentos profesionales, pensados para verse bien, funcionar bien y nacer con la seguridad en mente.</p>
-        <a class="hub-card__link" href="https://design.jagasoluciones.com/">Ir a Digital Design <span aria-hidden="true">→</span></a>
+      <li class="hub-card">
+        <h2 class="hub-card__title"><span class="hub-card__jaga">Jagā <span aria-hidden="true">·</span></span> Digital Design</h2>
+        <p class="hub-card__claim">Diseño y desarrollo a medida, con la seguridad incorporada desde el inicio.</p>
+        <ul class="hub-card__list" role="list">
+          <li>Sitios web</li>
+          <li>Aplicaciones</li>
+          <li>Presentaciones</li>
+          <li>Documentos profesionales</li>
+        </ul>
+        <a class="hub-card__link" href="https://design.jagasoluciones.com/">Entrar a Digital Design <span aria-hidden="true">→</span></a>
       </li>
-      <li class="hub-card hub-card--security">
-        <p class="hub-card__need">«Quiero auditar la seguridad de mi sistema»</p>
-        <h2 class="hub-card__brand">Security</h2>
-        <p class="hub-card__sub">Pruebas de intrusión (pentesting) para aplicaciones web, APIs, apps Android e infraestructura en la nube. Detectamos vulnerabilidades dentro de un alcance acordado por escrito.</p>
-        <a class="hub-card__link" href="https://security.jagasoluciones.com/">Ir a Security <span aria-hidden="true">→</span></a>
+      <li class="hub-card">
+        <h2 class="hub-card__title"><span class="hub-card__jaga">Jagā <span aria-hidden="true">·</span></span> Security</h2>
+        <p class="hub-card__claim">Pruebas de intrusión dentro de un alcance acordado por escrito.</p>
+        <ul class="hub-card__list" role="list">
+          <li>Aplicaciones web</li>
+          <li>APIs</li>
+          <li>Apps Android</li>
+          <li>Infraestructura en la nube</li>
+        </ul>
+        <a class="hub-card__link" href="https://security.jagasoluciones.com/">Entrar a Security <span aria-hidden="true">→</span></a>
       </li>
     </ul>
-
-    <p class="hub-split">Mantenimiento cuida tus equipos, Digital Design construye tus herramientas y Security pone a prueba tus sistemas.</p>
   </div>
 
   <section class="hub-contact" id="contacto" aria-labelledby="hub-contacto">
     <div class="wrap">
-      <h2 id="hub-contacto">¿No sabés por dónde empezar?</h2>
-      <p>Contanos tu situación y te decimos cuál área te conviene.</p>
+      <h2 id="hub-contacto">Contacto</h2>
       <address class="jaga-contact" data-jaga-contact>
         <a class="jaga-btn jaga-btn--primary" href="https://wa.me/5493794870266?text=Hola%2C%20quiero%20hacer%20una%20consulta%20a%20Jag%C4%81" target="_blank" rel="noopener">Escribinos por WhatsApp</a>
         <a class="jaga-btn" href="mailto:contacto@jagasoluciones.com">contacto@jagasoluciones.com</a>
-        <span class="jaga-contact__meta">Corrientes Capital</span>
       </address>
     </div>
   </section>
@@ -106,7 +133,11 @@
 
 <footer class="hub-footer">
   <div class="wrap">
-    <p>© 2026 Jagā · Corrientes Capital, Argentina</p>
+    <p class="lockup">
+      <svg class="lockup__mark" viewBox="0 0 339 331" aria-hidden="true" focusable="false"><use href="#jaga-isotipo"/></svg>
+      <span class="lockup__name">Jagā</span> <span class="lockup__sep" aria-hidden="true">·</span> <span class="lockup__desc">Soluciones Informáticas</span>
+    </p>
+    <p>© 2026 · Corrientes Capital, Argentina</p>
   </div>
 </footer>
 </body>
