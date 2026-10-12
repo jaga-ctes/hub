@@ -1,0 +1,165 @@
+/* Fuentes alojadas en el propio sitio (fonts/, licencia SIL OFL en fonts/LICENSE-archivo.txt). */
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/archivo-latin-ext-400-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/archivo-latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/archivo-latin-ext-600-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/archivo-latin-600-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("fonts/archivo-latin-ext-800-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("fonts/archivo-latin-800-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ============================================================
+   JAGĀ — hub de orientación (jagasoluciones.com)
+   Paleta neutra de Mantenimiento; cada tarjeta lleva el acento de su marca.
+   ============================================================ */
+
+:root {
+  --color-bg: #f3f2f2;
+  --color-surface: #eae9e9;
+  --color-text: #201e1d;
+  --color-muted: #605d5d;            /* neutral-700: 5,9:1 sobre el fondo */
+  --color-accent: #ec3013;           /* solo decorativo */
+  --color-primary: #dd2b0f;          /* accent-600: texto blanco 4,74:1 */
+  --color-primary-hover: #ae1800;    /* accent-700 */
+  --color-accent-text: #ae1800;      /* accent-700 como texto: 6,41:1 */
+  --color-divider: color-mix(in srgb, #201e1d 25%, transparent);
+
+  /* Capa compartida (jaga-shared.css) */
+  --jaga-accent: var(--color-primary);
+  --jaga-on-accent: #ffffff;
+  --jaga-fg: var(--color-text);
+  --jaga-fg-muted: var(--color-muted);
+  --jaga-bg: var(--color-bg);
+  --jaga-surface: var(--color-surface);
+  --jaga-font-ui: "Archivo", system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--color-bg); color: var(--color-text);
+  font-family: "Archivo", system-ui, sans-serif; font-size: 17px; line-height: 1.55;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: var(--color-accent-text); }
+a:hover { color: var(--color-text); }
+
+.wrap { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+
+/* --- Cabecera ------------------------------------------------------------- */
+.hub-header { border-bottom: 1px solid var(--color-divider); }
+.hub-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 80px; }
+.hub-logo { height: 48px; width: auto; }
+.hub-header__place { font-size: 14px; color: var(--color-muted); margin: 0; }
+
+/* --- Portada -------------------------------------------------------------- */
+.hub-hero { padding: 56px 0 32px; }
+.hub-kicker {
+  margin: 0 0 12px; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--color-accent-text);
+}
+.hub-kicker::before { content: ""; display: inline-block; width: 24px; height: 3px; background: var(--color-accent); vertical-align: middle; margin-right: 10px; }
+.hub-hero h1 { margin: 0 0 12px; font-size: clamp(32px, 6vw, 52px); font-weight: 800; line-height: 1.08; letter-spacing: -0.02em; }
+.hub-lead { margin: 0; max-width: 60ch; font-size: 19px; color: var(--color-muted); }
+
+/* --- Tarjetas por necesidad ---------------------------------------------- */
+.hub-cards { list-style: none; margin: 0; padding: 0 0 56px; display: grid; gap: 20px; grid-template-columns: 1fr; }
+@media (min-width: 900px) { .hub-cards { grid-template-columns: repeat(3, 1fr); } }
+
+.hub-card {
+  position: relative; display: flex; flex-direction: column; gap: 12px;
+  padding: 28px 24px; min-height: 100%;
+  background: var(--card-bg); color: var(--card-fg); border: 1px solid var(--card-border); border-top: 4px solid var(--card-accent-deco);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.hub-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(32, 30, 29, 0.14); }
+.hub-card__need { margin: 0; font-size: 20px; font-weight: 600; line-height: 1.3; }
+.hub-card__brand { margin: 8px 0 0; font-size: 14px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--card-accent); }
+.hub-card__sub { margin: 0; color: var(--card-muted); flex: 1; }
+.hub-card__link {
+  align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; min-height: 44px;
+  font-weight: 600; color: var(--card-accent); text-decoration: none; border-bottom: 2px solid currentColor;
+}
+.hub-card__link:hover { color: var(--card-fg); }
+/* Toda la tarjeta es clicable (sin JS): el enlace se estira sobre ella */
+.hub-card__link::after { content: ""; position: absolute; inset: 0; }
+.hub-card__link:focus-visible { outline: 2px solid var(--card-accent); outline-offset: 4px; }
+.hub-card:has(.hub-card__link:focus-visible) { box-shadow: 0 0 0 3px var(--card-accent); }
+
+/* Mantenimiento: rojo sobre neutro */
+.hub-card--mantenimiento {
+  --card-bg: #ffffff; --card-fg: #201e1d; --card-muted: #605d5d; --card-border: #d7d3d3;
+  --card-accent: #ae1800; --card-accent-deco: #ec3013;
+}
+/* Digital Design: neón cian sobre oscuro */
+.hub-card--design {
+  --card-bg: #060810; --card-fg: #d9e7ea; --card-muted: #8a9aa0; --card-border: rgba(0, 243, 255, 0.3);
+  --card-accent: #00f3ff; --card-accent-deco: #00f3ff;
+}
+.hub-card--design:hover { box-shadow: 0 0 0 1px rgba(0, 243, 255, 0.5), 0 10px 28px rgba(0, 243, 255, 0.18); }
+/* Security: tinta sobre papel */
+.hub-card--security {
+  --card-bg: #f5f3ee; --card-fg: #1c2d42; --card-muted: #5c6672; --card-border: #d6d1c4;
+  --card-accent: #1c2d42; --card-accent-deco: #1c2d42;
+}
+
+.hub-split { margin: 0 0 56px; padding: 20px 24px; background: var(--color-surface); color: var(--color-muted); }
+.hub-split strong { color: var(--color-text); }
+
+/* --- Contacto ------------------------------------------------------------- */
+.hub-contact { padding: 48px 0 56px; border-top: 1px solid var(--color-divider); }
+.hub-contact h2 { margin: 0 0 8px; font-size: clamp(24px, 4vw, 32px); font-weight: 800; letter-spacing: -0.01em; }
+.hub-contact p { margin: 0 0 20px; color: var(--color-muted); max-width: 60ch; }
+.jaga-btn--primary:hover { background: var(--color-primary-hover); border-color: var(--color-primary-hover); color: #ffffff; }
+.jaga-contact .jaga-btn:not(.jaga-btn--primary) { color: var(--color-text); }
+
+/* --- Pie ------------------------------------------------------------------ */
+.hub-footer { border-top: 1px solid var(--color-divider); padding: 24px 0 32px; font-size: 14px; color: var(--color-muted); }
+.hub-footer p { margin: 0; }
+
+/* --- 404 ------------------------------------------------------------------ */
+.hub-404 { padding: 72px 0; }
+.hub-404 h1 { margin: 0 0 12px; font-size: clamp(30px, 5vw, 44px); font-weight: 800; line-height: 1.1; }
+.hub-404 p { margin: 0 0 20px; color: var(--color-muted); }
+.hub-404__brands { list-style: none; margin: 24px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; }
+.hub-404__brands a { display: inline-block; min-height: 44px; line-height: 44px; font-weight: 600; }
