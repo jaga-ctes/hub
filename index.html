@@ -37,19 +37,25 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "ProfessionalService",
   "name": "Jagā · Soluciones Informáticas",
   "alternateName": "Jagā",
   "url": "https://jagasoluciones.com/",
   "logo": "https://jagasoluciones.com/img/jaga-isotipo.png",
   "email": "contacto@jagasoluciones.com",
-  "address": { "@type": "PostalAddress", "addressLocality": "Corrientes", "addressRegion": "Corrientes", "addressCountry": "AR" },
-  "areaServed": "Corrientes Capital",
+  "description": "Mantenimiento de equipos y redes, Digital Design para sitios y apps, y Security para pruebas de intrusión, en Corrientes Capital.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Corrientes",
+    "addressRegion": "Corrientes",
+    "addressCountry": "AR"
+  },
+  "areaServed": { "@type": "City", "name": "Corrientes" },
   "sameAs": ["https://github.com/jaga-ctes"],
-  "subOrganization": [
-    { "@type": "Organization", "name": "Jagā · Mantenimiento", "url": "https://mantenimiento.jagasoluciones.com/" },
-    { "@type": "Organization", "name": "Jagā · Digital Design", "url": "https://design.jagasoluciones.com/" },
-    { "@type": "Organization", "name": "Jagā · Security", "url": "https://security.jagasoluciones.com/" }
+  "department": [
+    { "@type": "ProfessionalService", "name": "Jagā · Mantenimiento", "url": "https://mantenimiento.jagasoluciones.com/" },
+    { "@type": "ProfessionalService", "name": "Jagā · Digital Design", "url": "https://design.jagasoluciones.com/" },
+    { "@type": "ProfessionalService", "name": "Jagā · Security", "url": "https://security.jagasoluciones.com/" }
   ]
 }
 </script>
